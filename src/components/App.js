@@ -51,7 +51,7 @@ function App() {
     }
   })
 
-  function onTextFormSubmit(newTask){
+  function onTaskFormSubmit(newTask){
     setTaskList([...taskList, newTask])
     if (categoryList == "All") {
       setCategoryTasks([...taskList, newTask])
@@ -69,7 +69,7 @@ function App() {
     <div className="App">
       <h2>My tasks</h2>
       <CategoryFilter handleFilter={handleFilter} categoryList={categoryList} categories={CATEGORIES}/>
-      <NewTaskForm onTextFormSubmit={onTextFormSubmit} categories={CATEGORIES}/>
+      <NewTaskForm onTaskFormSubmit={onTaskFormSubmit} categories={CATEGORIES}/>
       <TaskList handleDelete={handleDelete} tasks={categoryTasks} />
     </div>
   );
