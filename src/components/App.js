@@ -45,7 +45,6 @@ function App() {
 
   const categoriesToDisplay = CATEGORIES.filter((category) => {
     if (categoryList === "All") {
-
       return true;
     } else {
       return category === categoryList

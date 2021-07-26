@@ -26,7 +26,7 @@ function NewTaskForm({ categories, onTextFormSubmit }) {
   }
 
   return (
-    <form className="new-task-form">
+    <form onSubmit={handleOnTextFormSubmit} className="new-task-form">
       <label>
         Details
         <input onChange={handleTextState} type="text" name="text" />
@@ -37,7 +37,7 @@ function NewTaskForm({ categories, onTextFormSubmit }) {
           {categoryDropdown}
         </select>
       </label>
-      <input onClick={handleOnTextFormSubmit} type="submit" value="Add task" />
+      <input type="submit" value="Add task" />
     </form>
   );
 }
